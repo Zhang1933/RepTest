@@ -1,5 +1,7 @@
 # Test
 git test
 1 commit
-2 commit
-3 commit
+Creating a new branch is quick
+dev commit
+dev 3 commit
+dev 4 commit
