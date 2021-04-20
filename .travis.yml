@@ -1,12 +1,18 @@
 language: bash
-
 before_install:
-    - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"   
-    - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv"
-    - sudo apt-get update && sudo apt-get install imagemagick
-    - sudo sudo apt-get install p7zip-full
-    - 7z x -ot web_log.tsv.7z
-script:  
-    - ls
-    - bash dataProcess.sh -h
+- wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv"
+- ls
+script:
+- bash dataProcess.sh  -r -p -n -a > log.txt
+after_sucess:
+    git config --global user.email "193319076@qq.com"
+    git config --global user.name "Zhang1933"
+    git checkout -b result 
+    git add log.txt
+    git commit --message "Travis Test: $TRAVIS_BUILD_NUMBER"
+    git remote add origin https://${GH_TOKEN}@github.com/Zhang1933/Test.git > /dev/null 2>&1
+    git push --quiet --set-upstream origin result
     
+env:
+  global:
+    secure: D5QDm7+2CEeYxanqtIMO2g0ny1T935OWxBmrNI251gvltb8VkiLSlCGGLPtHnWhYAHO+UiMTZS8Vo2p99KdTLqQtngBpW3hJGUdeOhaXhzWnCORAcyH+WJj/86yqF6omlPRxelvLaGvj/1U/bcJ1EyM+pxO1cJBqUIT95BcPwKvuE2cBrrd/WMLQKvyEwPOyhLxDPvh/H/1zT4Y6EnLWj3V2iJlOXvtFykG6hLcXwVC9AI2iOxxZE1t1srehU29KWc5KZXGeFgM7eMf69VIgUs+cKEeBwAuihFf6XcWUnFNt61EQJSnL1SEgcMvKg2rMrJeJud9TiYgvspK7tCCjsfsTUKzLsqdPyh3vffRD+vUpUZ3OQKimOIFu+l0mUUPisMddAR9anQJJ4Zd9AxrWSVP/46JaPf3OIb3ZXuebdICFwME6YVE4v3CzDjNWgKsELi9we+J7r4HFCmW3wfdbFyd8vkF2QmSdcSjpUvqGdOULAjZuVHuafsTy5GLyoHq1WRJFQt2uTU+/OJAmZixo9phOcP6SBn2JeB7L4MTAIvil6ny8NY0rW7gf25O8lwHKd1mV3aokj6WR3ypVstvAAGHhHgR/clQsZuclkonac5g2pWMV1o6UAw0poAYEoWsyB6vExQ4m1JNeTIpx0OTjdzrjbvTkeUw+2iucou1ritg=
