@@ -9,7 +9,7 @@ script:
     - bash dataProcess.sh  -r -p -n -a > log.txt
 after_sucess:
     - ls
-    - git remote 
+      #    - git remote 
     - git config user.email ${EMAIL}
     - git config user.name ${USER}
     - git switch result 
