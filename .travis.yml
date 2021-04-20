@@ -14,5 +14,5 @@ after_sucess:
     - git config user.name ${USER}
     - git switch result 
     - git add log.txt
-    - git commit -m "Travis Test: "
+    - git commit -m"Travis Test:"
     - git push --force --quiet "https://${GH_TOKEN}@${GH_REPO}" result
