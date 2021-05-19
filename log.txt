@@ -1,0 +1,16 @@
+**************Age***************
+Age under 20 amount and ratio           :    9	0.012
+Age between 20 and 30 amount  and ratio :  600	0.815 
+Age greater than 30 amount and ratio    :  127	0.173 
+*****Position amount and Ratio*****
+amount of Défenseur          1		Ratio: 0.001
+amount of Midfielder       268		Ratio: 0.364
+amount of Defender         236		Ratio: 0.321
+amount of Forward          135		Ratio: 0.183
+amount of Goalie            96		Ratio: 0.130
+*************Name Statistics*********************
+Longest Name:	Francisco Javier Rodriguez
+Shortest Name:	Jô
+*****************Age Most********************
+Oldest:   	Faryd Mondragon
+Youngest: 	Fabrice Olinga
