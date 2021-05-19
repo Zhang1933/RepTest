@@ -6,4 +6,3 @@ Creating a new branch is quick
 dev commit
 dev 3 commit
 dev 4 commit
-demo 1 commit
