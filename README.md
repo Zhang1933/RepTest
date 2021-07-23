@@ -5,4 +5,4 @@ git test
 Creating a new branch is quick
 dev commit
 dev 3 commit
-teset  Git mergetool
+dev Git mergetool
