@@ -6,3 +6,7 @@ Creating a new branch is quick
 dev commit
 dev 3 commit
 dev Git mergetool
+
+pr test
+
+second test
