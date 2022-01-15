@@ -7,7 +7,7 @@ before_install:
     - ls
 script:
     - bash dataProcess.sh  -r -p -n -a > log.txt
-after_sucess:
+after_success:
     - ls
     - git config user.email ${EMAIL}
     - git config user.name ${USER}
