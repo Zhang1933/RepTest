@@ -9,6 +9,7 @@ script:
     - bash dataProcess.sh  -r -p -n -a > log.txt
 after_success:
     - ls
+    - git remote rm origin
     - git remote add origin https:${GH_TOKEN}://@github.com/Zhang1933/Test.git
     - git switch result 
     - git add log.txt
